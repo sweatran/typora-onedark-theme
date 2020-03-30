@@ -1,32 +1,25 @@
----
-layout: theme
-title: OneDark
-category: theme
-homepage: 
-download: 
-built-in: false
-author: sweatran
-thumbnail: sweatran.png
-typora-root-url: ./
-typora-copy-images-to: ./images
----
-
 # OneDark Theme
 
 A **dark** theme for Typora inspired by VScode's *One Dark Pro* theme.
 
-**Feature: **
+## Feature
 
 * Color scheme inspired by One Dark Pro.
 * Customized h1-h6 headers.
 * Shadow effect for: 
-  * panel, sidebar
-  * codeblock, toc, YAML, checkbox, table, mathjax
-  * etc
+  * Panel, sidebar
+  * CodeBlock, TOC, YAML, checkbox, table, MathJax
+  * etc...
 * Hover highlight effect for most buttons and links.
-* Fade in / out animation when switch between each mode and panel
+* Fade in / out animations when switch between each mode and panel
 
-**Screenshots: **
+## Install
+
+* Download the theme package.
+* Extract all the file under `theme` folder to Typora's theme folder.
+* Select `Onedark` theme in Typora.
+
+## Screenshots
 
 ![](/images/image-20200330213811849.png)
 
@@ -38,9 +31,10 @@ A **dark** theme for Typora inspired by VScode's *One Dark Pro* theme.
 
 ![image-20200330214331117](/images/image-20200330214331117.png)
 
-> Notes：
->
-> * Only fully tested on Windows. Support Windows "Unibody" style. 
->
-> * The theme should work on MacOS / Linux. Howerver, some effect may display improperly (e.g. checkbox).
+## Notes
 
+* Only tested on Windows, Typora version 0.9.86(beta). 
+* Support Windows "Unibody" style. 
+* The theme should work on MacOS / Linux. Howerver, some effect may display improperly (e.g. checkbox).
+
+> If you have any advice or feedback, please create a new issue or contact me via email: sweatran@gmail.com

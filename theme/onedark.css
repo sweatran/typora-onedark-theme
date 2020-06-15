@@ -1343,17 +1343,17 @@ pre.md-meta-block:active {
 
 #write {
     display: block !important;
-    visibility: hidden;
-    opacity: 0;
+    visibility: visible;
+    opacity: 1;
     transition: 0.3s;
     max-width: 1200px;
     padding-left: 70px;
     padding-right: 70px;
 }
 
-:not(.typora-sourceview-on) #write {
-    visibility: visible;
-    opacity: 1;
+.typora-sourceview-on #write {
+    visibility: hidden;
+    opacity: 0;
 }
 
 /* #md-searchpanel {

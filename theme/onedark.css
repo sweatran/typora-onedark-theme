@@ -697,6 +697,16 @@ input[type="radio"]:checked:before {
   border-color: var(--menu-divider-color);
 }
 
+/* sidebar osx tab */
+.html-for-mac .sidebar-osx-tab > .sidebar-tabs {
+  border: 0px;
+  box-shadow: 0 4px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+.html-for-mac .sidebar-content {
+  z-index: -1; /* so that the background doesn't overlap with the shadow */
+}
+
 /* sidebar footer */
 .sidebar-footer {
   border: 0px;

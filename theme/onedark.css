@@ -700,15 +700,7 @@ input[type="radio"]:checked:before {
 /* sidebar footer */
 .sidebar-footer {
   border: 0px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  transition: 0.3s;
-  display: flex !important;
-}
-
-.pin-outline
-  #typora-sidebar:hover
-  .sidebar-footer:not(.show-sidebar-footer-context) {
-  animation: none;
+  box-shadow: 0 -4px 10px -5px rgba(0, 0, 0, 0.5);
 }
 
 /* remove outline when file item in treeview is selected*/

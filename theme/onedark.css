@@ -636,7 +636,8 @@ input[type="radio"]:checked:before {
 }
 
 /* sidebar shadow */
-#typora-sidebar {
+#typora-sidebar,
+.typora-node #typora-sidebar {
   box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.5);
 }
 

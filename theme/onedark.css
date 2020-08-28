@@ -381,6 +381,10 @@ sup.md-footnote {
   color: var(--text-color1);
 }
 
+.on-focus-mode #write svg {
+  opacity: 1;
+}
+
 .md-rawblock > .md-rawblock-container {
   transition: 0.5s;
 }

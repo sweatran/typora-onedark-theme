@@ -232,16 +232,17 @@ blockquote blockquote {
 }
 
 /* table */
+.md-rawblock > .md-rawblock-container table,
 .md-table-fig,
 .md-table-fig:active {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-.md-table thead tr {
+table thead tr {
   background-color: var(--table-thead-color);
 }
 
-.md-table tr th {
+table tr th {
   font-weight: bold;
   border-left: 1px solid var(--table-border-color);
   border-right: 1px solid var(--table-border-color);
@@ -250,21 +251,21 @@ blockquote blockquote {
   padding: 6px 13px;
 }
 
-.md-table tbody tr {
+table tbody tr {
   border-top: 1px solid var(--table-border-color);
   margin: 0;
   padding: 0;
 }
 
-.md-table tbody tr:nth-child(2n) {
+table tbody tr:nth-child(2n) {
   background-color: var(--table-bg-darker-color);
 }
 
-.md-table tbody tr:nth-child(2n + 1) {
+table tbody tr:nth-child(2n + 1) {
   background-color: var(--table-bg-color);
 }
 
-.md-table tr td {
+table tr td {
   border-left: 1px solid var(--table-border-color);
   border-right: 1px solid var(--table-border-color);
   text-align: left;
@@ -272,13 +273,13 @@ blockquote blockquote {
   padding: 6px 13px;
 }
 
-.md-table tr th:first-child,
-.md-table tr td:first-child {
+table tr th:first-child,
+table tr td:first-child {
   border-left-width: 0px;
 }
 
-.md-table tr th:last-child,
-.md-table tr td:last-child {
+table tr th:last-child,
+table tr td:last-child {
   border-right-width: 0px;
 }
 
@@ -426,14 +427,14 @@ input {
 input[type="checkbox"]:before {
   content: "";
   display: inline-block;
-  width: 1.1rem;
-  height: 1.1rem;
+  width: 1.2rem;
+  height: 1.2rem;
   vertical-align: middle;
   text-align: center;
   border: 0px;
   border-radius: 3px;
   background-color: var(--input-color);
-  margin-top: -0.5rem;
+  margin-top: -0.2rem;
   margin-left: -0.1rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
@@ -466,8 +467,8 @@ input[type="checkbox"]:checked:hover:before {
 input[type="radio"]:before {
   content: "";
   display: inline-block;
-  width: 1.1rem;
-  height: 1.1rem;
+  width: 1.2rem;
+  height: 1.2rem;
   vertical-align: middle;
   text-align: center;
   border: 0px;
@@ -769,12 +770,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 /* the indent example in setting.editor */
-div.pane
-  > div:nth-child(4)
-  > div:nth-child(2)
-  .label-input-group
-  td:last-child
-  div {
+div[data-index="2"] .label-input-group td:last-child div {
   border: 0px !important;
   border-radius: 6px;
   background-color: var(--bg-color5);
@@ -1554,6 +1550,11 @@ text.actor {
 .label {
   color: var(--text-color1);
 }
+
+.edgeLabel rect {
+  fill: transparent !important;
+}
+
 
 /* mermaid gantt */
 .titleText {

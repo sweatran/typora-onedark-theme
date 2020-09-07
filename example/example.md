@@ -107,6 +107,39 @@ You can create footnotes like this[^fn1] and this[^fn2].
 
 <video src="./video.mp4" />
 
+<table>
+  <tr>
+   <td>Bash command
+   </td>
+   <td>Description
+   </td>
+  </tr>
+  <tr>
+   <td>ls
+   </td>
+   <td>List directory contents
+   </td>
+  </tr>
+  <tr>
+   <td>cd
+   </td>
+   <td>Change directory
+   </td>
+  </tr>
+  <tr>
+   <td>cp
+   </td>
+   <td>Copy files
+   </td>
+  </tr>
+  <tr>
+   <td>mv
+   </td>
+   <td>Move files
+   </td>
+  </tr>
+</table>
+
 ## Graph
 
 ### sequence
@@ -190,3 +223,4 @@ A[Hard edge] -->B(Round edge)
         Add gantt diagram to demo page      : 20h
         Add another diagram to demo page    : 48h
 ```
+

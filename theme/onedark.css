@@ -1,7 +1,7 @@
 :root {
   /* dark color for background*/
   /* default color */
-  --bg-color1: rgb(40, 44, 52);
+  --bg-color1: hsl(220, 13%, 18%);
   /* for most panel, context, header, etc */
   --bg-color2: rgb(33, 37, 43);
   /* for toc and table edit panel */
@@ -12,7 +12,7 @@
   --bg-color5: rgb(29, 31, 35);
   /* light color for text and icon*/
   /* default color */
-  --text-color1: rgb(170, 178, 180);
+  --text-color1: hsl(220, 6%, 71%);
   /* for text on panel */
   --text-color2: rgb(220, 220, 220);
   /* for checkbox and radio */
@@ -26,7 +26,7 @@
   /* table color */
   --table-border-color: rgb(100, 104, 116);
   --table-thead-color: rgb(31, 35, 40);
-  --table-bg-color: rgb(40, 45, 52);
+  --table-bg-color: rgb(40, 44, 52);
   --table-bg-darker-color: rgb(35, 40, 46);
   /* hover color */
   /* default hover background color */
@@ -42,7 +42,8 @@
   /* input color */
   --input-color: rgb(29, 31, 35);
   /* menu divider color */
-  --menu-divider-color: rgb(95, 97, 101);
+  /*   --menu-divider-color: rgb(95, 97, 101); */
+  --menu-divider-color: hsl(220, 5%, 40%);
   /* scrollbar color */
   --scrollbar-thumb-color: var(--menu-divider-color);
   --scrollbar-track-color: rgba(95, 97, 101, 0.3);
@@ -54,16 +55,17 @@
   --focus-color: rgba(100, 100, 100, 0.8);
   --focus-ring-color: var(--focus-color);
   /* codeblock color */
-  --code-red-color: rgb(221, 110, 115);
-  --code-yellow-color: rgb(218, 192, 123);
-  --code-cyan-color: rgb(86, 182, 194);
-  --code-blue-color: rgb(94, 174, 237);
-  --code-purple-color: rgb(195, 115, 215);
-  --code-orange-color: rgb(221, 153, 103);
-  --code-grey-color: rgb(127, 132, 142);
-  --code-green-color: rgb(152, 195, 123);
+  --code-red-color: hsl(355, 65%, 65%);
+  --code-yellow-color: hsl(39, 67%, 69%);
+  --code-cyan-color: hsl(187, 47%, 55%);
+  --code-blue-color: hsl(207, 82%, 66%);
+  --code-purple-color: hsl(286, 60%, 67%);
+  --code-orange-color: hsl(29, 54%, 61%);
+  --code-green-color: hsl(95, 38%, 62%);
+  --code-grey-color: hsl(220, 9%, 55%);
+
   --code-select-bg-color: rgb(64, 72, 89);
-  --code-cursor-color: rgb(82, 139, 255);
+  --code-cursor-color: hsl(220, 100%, 66%);
   /* implicit selecttion text bg color */
   --select-text-bg-color: rgb(150, 156, 170);
   /* implicit button color */
@@ -1270,12 +1272,13 @@ code {
   color: var(--code-purple-color);
 }
 
-/* unknown highlight keyword */
+/* in pie chart and flowchart */
 .cm-s-inner .cm-quote,
 .cm-s-inner.cm-quote {
-  color: #57ac57;
+  color: var(--code-green-color);
 }
 
+/* unknown highlight keyword */
 .cm-s-inner .cm-link {
   color: var(--code-blue-color);
 }
@@ -1520,26 +1523,13 @@ pre.md-meta-block:active {
   cursor: default;
 }
 
-/* mermaid sequence*/
-text.actor {
-  fill: var(--text-color1);
-}
-
-.labelText {
-  fill: var(--text-color1);
-}
-
-.loopText {
-  fill: var(--text-color1);
-}
-
 /* mermaid flowchart */
 .node rect,
 .node circle,
 .node ellipse,
-.node polygon {
+.node polygon,
+.node path {
   fill: var(--bg-color2);
-  stroke: var(--text-color1);
   stroke: var(--menu-divider-color);
 }
 
@@ -1555,6 +1545,251 @@ text.actor {
   fill: transparent !important;
 }
 
+.cluster rect {
+  fill: var(--bg-color5);
+  stroke: var(--menu-divider-color);
+}
+
+/* mermaid sequence*/
+text.actor {
+  fill: var(--text-color1);
+}
+
+.messageLine0,
+.messageLine1 {
+  stroke: var(--menu-divider-color) !important;
+}
+
+rect[class*="activation"] {
+  fill: var(--bg-color2);
+}
+
+.actor-line {
+  stroke-width: 1px !important;
+}
+
+.labelBox {
+  stroke: rgb(150, 150, 150);
+}
+
+.labelText {
+  fill: var(--text-color1);
+}
+
+.loopText {
+  fill: var(--text-color1);
+}
+
+.loopLine {
+  stroke: rgb(150, 150, 150);
+}
+
+.note {
+  fill: var(--bg-color2);
+  stroke: var(--menu-divider-color);
+}
+
+.noteText {
+  fill: var(--text-color1);
+}
+
+/* mermaid class */
+g.classGroup text {
+  fill: var(--text-color);
+}
+
+g.classGroup rect {
+  stroke: var(--menu-divider-color);
+  fill: var(--bg-color2);
+}
+
+g.classGroup line {
+  stroke: var(--menu-divider-color);
+}
+
+.classLabel .label {
+  fill: var(--text-color1) !important;
+}
+
+.relation {
+  stroke: var(--menu-divider-color);
+}
+
+#compositionStart,
+#compositionEnd,
+#aggregationStart,
+#aggregationEnd,
+#dependencyStart,
+#dependencyStart,
+#extensionStart,
+#extensionEnd {
+  fill: var(--menu-divider-color);
+  stroke: var(--menu-divider-color);
+}
+
+.cardinality text {
+  fill: var(--text-color);
+}
+
+/* mermaid state v1 */
+.stateGroup rect,
+.stateGroup line {
+  fill: var(--bg-color2) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+.stateGroup text {
+  fill: var(--text-color) !important;
+}
+
+.stateGroup circle {
+  fill: var(--bg-color4) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+.stateGroup .composit {
+  /*   fill: rgb(36,40,47) !important; */
+  fill: hsl(218, 13%, 17%) !important;
+}
+
+.stateGroup .alt-composit {
+  /*   fill: rgb(36,40,47) !important; */
+  fill: hsl(218, 13%, 16.5%) !important;
+}
+
+.state-note rect {
+  fill: var(--bg-color2);
+  stroke: var(--menu-divider-color);
+}
+
+.state-note text {
+  fill: var(--text-color);
+}
+
+.stateLabel text {
+  fill: var(--text-color);
+}
+
+#dependencyEnd {
+  fill: var(--menu-divider-color);
+  stroke: var(--menu-divider-color);
+}
+
+/* mermaid state v2*/
+.state-start {
+  fill: var(--bg-color4) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+.state-end {
+  stroke: var(--menu-divider-color) !important;
+  fill: var(--bg-color4) !important;
+}
+
+.divider {
+  stroke: var(--menu-divider-color) !important;
+  fill: var(--bg-color5) !important;
+  fill: hsl(218, 13%, 13.5%) !important;
+}
+
+.fork-join {
+  fill: var(--bg-color2) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+.title-state {
+  fill: var(--bg-color2) !important;
+}
+
+.statediagram-cluster .outer {
+  /*   fill: var(--bg-color4) !important; */
+  stroke: var(--menu-divider-color) !important;
+}
+
+.statediagram-cluster .inner {
+  /*   fill: var(--bg-color2) !important; */
+  fill: hsl(218, 13%, 16.5%) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+.statediagram-cluster-alt .inner {
+  /*   fill: var(--bg-color5) !important; */
+  fill: hsl(218, 13%, 16%) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+.transition {
+  stroke: var(--menu-divider-color);
+}
+
+#statediagram-barbEnd {
+  fill: var(--menu-divider-color);
+}
+
+/* mermaid journey */
+.journey-section {
+  fill: var(--bg-color5);
+  stroke: var(--menu-divider-color);
+}
+
+.journey-section div {
+  color: var(--text-color) !important;
+}
+
+.task {
+  fill: var(--bg-color2);
+  stroke: var(--menu-divider-color);
+  stroke-width: 1px;
+}
+
+.task div {
+  color: var(--text-color) !important;
+}
+
+#arrowhead {
+  fill: var(--menu-divider-color);
+  stroke: var(--menu-divider-color);
+  stroke-width: 0.3px;
+}
+
+pre[mermaid-type="journey"] line {
+  stroke: var(--menu-divider-color);
+  stroke-width: 2px;
+}
+
+pre[mermaid-type="journey"] text {
+  fill: var(--text-color1);
+}
+
+pre[mermaid-type="journey"] g path,
+pre[mermaid-type="journey"] g line {
+  fill: rgb(100, 104, 110);
+  stroke: var(--text-color);
+}
+
+.task-line {
+  stroke: var(--menu-divider-color) !important;
+}
+
+/* mermaid erDiagram */
+pre[mermaid-type="erDiagram"] rect {
+  fill: var(--bg-color2);
+}
+
+pre[mermaid-type="erDiagram"] text {
+  fill: var(--text-color);
+}
+
+pre[mermaid-type="erDiagram"] path {
+  stroke: var(--menu-divider-color);
+}
+
+#ZERO_OR_ONE_START circle,
+#ZERO_OR_ONE_END circle,
+#ZERO_OR_MORE_START circle,
+#ZERO_OR_MORE_END circle {
+  fill: var(--bg-color);
+}
 
 /* mermaid gantt */
 .titleText {
@@ -1646,6 +1881,23 @@ text.actor {
 
 .today {
   stroke: var(--text-color1);
+}
+
+/* mermaid pie chart */
+g.legend > text {
+  fill: var(--text-color1);
+}
+
+g.legend > rect {
+  stroke: var(--bg-color) !important;
+}
+
+g > path {
+  stroke: var(--bg-color);
+}
+
+g > text.slice {
+  fill: var(--bg-color);
 }
 
 /* flow diagram */

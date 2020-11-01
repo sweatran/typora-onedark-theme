@@ -165,62 +165,248 @@ cond(no)->op
 
 ### mermaid
 
-#### sequence
+#### Flowchart
+
+```mermaid
+graph TD
+    Start --> Stop
+```
+```mermaid
+graph LR
+	A([A]) --- B(B) -- C --- C{C}
+    C -- D --> D[[D]]
+    C -.->|E| E[E]
+    C -. F .-> F[(F)]
+    C ==>|G| G((G))
+    B == edge ==> H>H]
+    B --> I{{I}}
+    subgraph sub [subgraph]
+    I -->|J| J[/J/]
+    I -->|K| K[\K\]
+    I -->|L| L[\L/]
+    I -->|M| M[/M\]
+    end
+```
+
+
+#### Sequence diagram
 
 ```mermaid
 %% Example of sequence diagram
-  sequenceDiagram
-    Alice->>Bob: Hello Bob, how are you?
-    alt is sick
-    Bob->>Alice: Not so good :(
-    else is well
-    Bob->>Alice: Feeling fresh like a daisy
+sequenceDiagram
+	participant A
+	participant B
+	participant C
+	Note right of B: note
+	Note over A,B: note
+	A->B: a
+	activate B
+	A-->B: b
+	activate B
+	A->>B: c
+	deactivate B
+	A-->>B: d
+	deactivate B
+	rect rgba(128,0,0,0.5)
+	A-xA: e
+	end
+	loop loop
+        A--xB: f
     end
-    opt Extra response
-    Bob->>Alice: Thanks for asking
+    alt alt
+        B->>A: g
+    else else
+        B->>A: h
     end
+    par par
+    	A->C: i
+    and and
+    	A->B: j
+    	par nest
+    		B->C: k
+    	end
+    end
+    
 ```
 
-#### flowchart
+#### Class diagram
 
 ```mermaid
-graph LR
-A[Hard edge] -->B(Round edge)
-    B --> C{Decision}
-    C -->|One| D[Result one]
-    C -->|Two| E[Result two]
+classDiagram
+    A <|-- B: label
+    A "1" *-- "1.." C
+    A "*" o-- "0..1" D
+    C <-- E
+    C -- F
+    D <.. G
+    D <|.. H
+    D .. I
+    A: +int i1
+    A: -String s1
+    A: #List~int~ l1
+    A: ~f1(arg) bool
+    A: +f2()*
+    A: +f3()$
+    class B {
+   		<<enumeration>>
+        RED
+        GREEN
+        BLUE
+    }
+    class D {
+    	<<interface>>
+    	int i1
+    	f1()
+    }
 ```
 
-#### gantt
+#### State diagram
+
+```mermaid
+stateDiagram
+    [*] --> Still
+    Still --> [*]
+
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+```
+
+```mermaid
+stateDiagram
+	state fork_state <<fork>>
+    state "This is A" as A
+    [*] --> fork_state
+    [*] --> D
+    D --> fork_state
+    note right of D
+    	note for D
+    end note
+    note left of A: note for A
+    fork_state --> A
+    fork_state --> B
+    A --> C: trans
+    B --> C
+    C --> [*]
+    state C {
+    	[*] --> C1: test
+    	C1 --> C2
+    	C2 --> C3
+    	C3 --> [*]
+    	state C2 {
+    		[*] --> C21
+    		C21 --> [*]
+    		state C21 {
+    			[*] --> C211
+    		}
+    	}
+    	C1: This is C1
+    	--
+    	[*] --> T
+    }
+```
+
+```mermaid
+stateDiagram-v2
+	state fork_state <<fork>>
+    state "This is A" as A
+    [*] --> fork_state
+    [*] --> D
+    D --> fork_state
+    note right of D
+    	note for D
+    end note
+    note left of A: note for A
+    fork_state --> A
+    fork_state --> B
+    A --> C: trans
+    B --> C
+    C --> [*]
+    state C {
+    	[*] --> C1: test
+    	C1 --> C2
+    	C2 --> C3
+    	C3 --> [*]
+    	state C2 {
+    		[*] --> C21
+    		C21 --> [*]
+    		state C21 {
+    			[*] --> C211
+    		}
+    	}
+    	C1: This is C1
+    	--
+    	[*] --> T
+    }
+```
+
+#### Entity Relationship Diagram
+
+```mermaid
+erDiagram
+    A |o--o| B : b
+    B ||--|| C : c
+    A }o..o{ D : d
+    D }|..|{ E : e
+```
+
+#### User Journey Diagram
+
+```mermaid
+journey
+    title My working day
+    section A
+        A1: 5: Me
+        A2: 3: Me
+        A3: 1: Me, Cat
+```
+
+#### Gantt
 
 ```mermaid
 %% Example with slection of syntaxes
-        gantt
-        dateFormat  YYYY-MM-DD
-        title Adding GANTT diagram functionality to mermaid
+gantt
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram functionality to mermaid
 
-        section A section
-        Completed task            :done,    des1, 2014-01-06,2014-01-08
-        Active task               :active,  des2, 2014-01-09, 3d
-        Future task               :         des3, after des2, 5d
-        Future task2               :         des4, after des3, 5d
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2               :         des4, after des3, 5d
 
-        section Critical tasks
-        Completed task in the critical line :crit, done, 2014-01-06,24h
-        Implement parser and jison          :crit, done, after des1, 2d
-        Create tests for parser             :crit, active, 3d
-        Future task in critical line        :crit, 5d
-        Create tests for renderer           :2d
-        Add to mermaid                      :1d
+section Critical tasks
+Completed task in the critical line :crit, done, 2014-01-06,24h
+Implement parser and jison          :crit, done, after des1, 2d
+Create tests for parser             :crit, active, 3d
+Future task in critical line        :crit, 5d
+Create tests for renderer           :2d
+Add to mermaid                      :1d
 
-        section Documentation
-        Describe gantt syntax               :active, a1, after des1, 3d
-        Add gantt diagram to demo page      :after a1  , 20h
-        Add another diagram to demo page    :doc1, after a1  , 48h
+section Documentation
+Describe gantt syntax               :active, a1, after des1, 3d
+Add gantt diagram to demo page      :after a1  , 20h
+Add another diagram to demo page    :doc1, after a1  , 48h
 
-        section Last section
-        Describe gantt syntax               :after doc1, 3d
-        Add gantt diagram to demo page      : 20h
-        Add another diagram to demo page    : 48h
+section Last section
+Describe gantt syntax               :after doc1, 3d
+Add gantt diagram to demo page      : 20h
+Add another diagram to demo page    : 48h
 ```
 
+#### Pie Chart
+
+```mermaid
+
+pie
+    title Pie Chart
+    "A" : 1
+    "B" : 2
+    "C" : 3
+    "D" : 4
+    "E" : 5
+    "F" : 6
+    "G" : 7
+    "H" : 8
+```

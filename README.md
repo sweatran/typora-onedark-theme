@@ -1,17 +1,18 @@
 # OneDark Theme
 
-A **dark** theme for Typora inspired by VScode's *One Dark Pro* theme.
+A **DARK** theme for Typora inspired by One Dark theme and Material Design.
 
 ## Feature
 
-* Color scheme inspired by One Dark Pro.
+* Color scheme inspired by One Dark theme.
 * Customized h1-h6 headers.
-* Shadow effect for: 
-  * Panel, sidebar
-  * CodeBlock, TOC, YAML, checkbox, table, MathJax
-  * etc...
-* Hover highlight effect for most buttons and links.
-* Fade in / out animations when switch between each mode and panel
+* Material Design shadow effect for: 
+  * All Panels, sidebars
+  * Tables, TOC, YAML, MathJax, CodeBlock,
+  * etc ...
+* Hover highlight effect for all buttons and links.
+* Fade in / out animations when switching panels.
+* **(New)** Support dark theme for all mermaid chart.
 
 ## Install
 
@@ -31,9 +32,14 @@ A **dark** theme for Typora inspired by VScode's *One Dark Pro* theme.
 
 ![image-20200330214331117](/images/image-20200330214331117.png)
 
+## To-Do
+
+* Add Meterial Design shadow effect to mermaid chart.
+* Better support for Linux.
+
 ## Notes
 
-* Only tested on Windows, Typora version 0.9.86(beta). 
+* Only tested on Windows, Typora version 0.9.96(beta). 
 * Support Windows "Unibody" style. 
 * The theme should work on MacOS / Linux. Howerver, some effect may display improperly (e.g. checkbox).
 

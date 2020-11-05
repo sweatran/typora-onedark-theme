@@ -59,6 +59,12 @@ test.show()
 
 Run terminal then enter: `python hello_world.py`
 
+## KBD
+
+* bold：<kbd>Ctrl/Command</kbd> + <kbd>B</kbd> 
+
+* italic：<kbd>Ctrl/Command</kbd> + <kbd>I</kbd> 
+
 ## MathJax
 
 Given two populations, $x_1$ and $x_2$ , with logistic dynamics, the Lotka–Volterra formulation adds an additional term to account for the species' interactions. Thus the competitive Lotka–Volterra equations are:

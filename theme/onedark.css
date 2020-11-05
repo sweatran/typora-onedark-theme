@@ -173,38 +173,45 @@ body {
   font-size: 2.5em;
   padding-bottom: 0.5em;
   border-bottom: 5px double var(--text-color1);
+  padding-top: 0.3em;
 }
 
-#write h1:before {
+/* #write h1:before {
   content: "\00A7  ";
 }
-
+ */
 #write h2 {
   font-size: 2em;
   padding-bottom: 0.5em;
   border-bottom: 3px double var(--text-color1);
+  padding-top: 0.3em;
 }
 
-#write h2:before {
+/* #write h2:before {
   content: "\00A7  ";
 }
-
+ */
 #write h3 {
   font-size: 1.75em;
   padding-bottom: 0.5em;
   border-bottom: 1px solid var(--text-color1);
+/*   border-color: var(--menu-divider-color); */
+  padding-top: 0.3em;
 }
 
 #write h4 {
   font-size: 1.55em;
+  padding-top: 0.3em;
 }
 
 #write h5 {
   font-size: 1.35em;
+  padding-top: 0.3em;
 }
 
 #write h6 {
   font-size: 1.2em;
+  padding-top: 0.3em;
 }
 
 /* horizontal divider */
@@ -436,8 +443,8 @@ input[type="checkbox"]:before {
   border: 0px;
   border-radius: 3px;
   background-color: var(--input-color);
-  margin-top: -0.2rem;
-  margin-left: -0.1rem;
+  margin-top: -0.7rem;
+  margin-left: -0.2rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -1083,7 +1090,7 @@ code {
   background-color: var(--bg-color5);
   border-radius: 6px;
   padding: 4px 4px 4px 4px;
-  margin: 0px 6px 0px 6px;
+  margin: 0px 0px 0px 0px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -1944,4 +1951,11 @@ g > text.slice {
 /* remove border when edit graph */
 .md-diagram-panel {
   border: none !important;
+}
+
+kbd {
+  background: var(--bg-color5);
+  color: var(--text-color2);
+  border-color: var(--menu-divider-color);
+  box-shadow: 0 2px 0 var(--menu-divider-color);
 }

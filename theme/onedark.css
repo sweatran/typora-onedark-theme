@@ -167,13 +167,15 @@ body {
   margin-top: 0.5em;
   margin-bottom: 0em;
   line-height: 1em;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  padding-top: 0.3em;
 }
 
 #write h1 {
   font-size: 2.5em;
   padding-bottom: 0.5em;
-  border-bottom: 5px double var(--text-color1);
-  padding-top: 0.3em;
+  border-bottom: 3px double var(--text-color5);
+  
 }
 
 /* #write h1:before {
@@ -183,8 +185,7 @@ body {
 #write h2 {
   font-size: 2em;
   padding-bottom: 0.5em;
-  border-bottom: 3px double var(--text-color1);
-  padding-top: 0.3em;
+  border-bottom: 3px double var(--text-color5);
 }
 
 /* #write h2:before {
@@ -194,24 +195,19 @@ body {
 #write h3 {
   font-size: 1.75em;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid var(--text-color1);
-/*   border-color: var(--menu-divider-color); */
-  padding-top: 0.3em;
+  border-bottom: 1px solid var(--text-color5);
 }
 
 #write h4 {
   font-size: 1.55em;
-  padding-top: 0.3em;
 }
 
 #write h5 {
   font-size: 1.35em;
-  padding-top: 0.3em;
 }
 
 #write h6 {
   font-size: 1.2em;
-  padding-top: 0.3em;
 }
 
 /* horizontal divider */
@@ -1955,7 +1951,8 @@ g > text.slice {
 
 kbd {
   background: var(--bg-color5);
-  color: var(--text-color2);
+  color: var(--text-color1);
+  font-family: "Lucida Console";
   border-color: var(--menu-divider-color);
   box-shadow: 0 2px 0 var(--menu-divider-color);
 }

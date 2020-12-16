@@ -1532,16 +1532,16 @@ pre.md-meta-block:active {
 .node ellipse,
 .node polygon,
 .node path {
-  fill: var(--bg-color2);
-  stroke: var(--menu-divider-color);
+  fill: var(--bg-color2) !important;
+  stroke: var(--menu-divider-color) !important;
 }
 
 .edgePath .path {
-  stroke: var(--menu-divider-color);
+  stroke: var(--menu-divider-color) !important;
 }
 
 .label {
-  color: var(--text-color1);
+  color: var(--text-color1) !important;
 }
 
 .edgeLabel rect {
@@ -1549,13 +1549,13 @@ pre.md-meta-block:active {
 }
 
 .cluster rect {
-  fill: var(--bg-color5);
-  stroke: var(--menu-divider-color);
+  fill: var(--bg-color5) !important;
+  stroke: var(--menu-divider-color) !important;
 }
 
 /* mermaid sequence*/
 text.actor {
-  fill: var(--text-color1);
+  fill: var(--text-color1) !important;
 }
 
 .messageLine0,
@@ -1564,7 +1564,7 @@ text.actor {
 }
 
 rect[class*="activation"] {
-  fill: var(--bg-color2);
+  fill: var(--bg-color2) !important;
 }
 
 .actor-line {
@@ -1572,42 +1572,42 @@ rect[class*="activation"] {
 }
 
 .labelBox {
-  stroke: rgb(150, 150, 150);
+  stroke: rgb(150, 150, 150) !important;
 }
 
 .labelText {
-  fill: var(--text-color1);
+  fill: var(--text-color1) !important;
 }
 
 .loopText {
-  fill: var(--text-color1);
+  fill: var(--text-color1) !important;
 }
 
 .loopLine {
-  stroke: rgb(150, 150, 150);
+  stroke: rgb(150, 150, 150) !important;
 }
 
 .note {
-  fill: var(--bg-color2);
-  stroke: var(--menu-divider-color);
+  fill: var(--bg-color2) !important;
+  stroke: var(--menu-divider-color) !important;
 }
 
 .noteText {
-  fill: var(--text-color1);
+  fill: var(--text-color1) !important;
 }
 
 /* mermaid class */
 g.classGroup text {
-  fill: var(--text-color);
+  fill: var(--text-color) !important;
 }
 
 g.classGroup rect {
-  stroke: var(--menu-divider-color);
-  fill: var(--bg-color2);
+  stroke: var(--menu-divider-color) !important;
+  fill: var(--bg-color2) !important;
 }
 
 g.classGroup line {
-  stroke: var(--menu-divider-color);
+  stroke: var(--menu-divider-color) !important;
 }
 
 .classLabel .label {
@@ -1615,7 +1615,7 @@ g.classGroup line {
 }
 
 .relation {
-  stroke: var(--menu-divider-color);
+  stroke: var(--menu-divider-color) !important;
 }
 
 #compositionStart,
@@ -1626,12 +1626,12 @@ g.classGroup line {
 #dependencyStart,
 #extensionStart,
 #extensionEnd {
-  fill: var(--menu-divider-color);
-  stroke: var(--menu-divider-color);
+  fill: var(--menu-divider-color) !important;
+  stroke: var(--menu-divider-color) !important;
 }
 
 .cardinality text {
-  fill: var(--text-color);
+  fill: var(--text-color) !important;
 }
 
 /* mermaid state v1 */
@@ -1661,21 +1661,21 @@ g.classGroup line {
 }
 
 .state-note rect {
-  fill: var(--bg-color2);
-  stroke: var(--menu-divider-color);
+  fill: var(--bg-color2) !important;
+  stroke: var(--menu-divider-color) !important;
 }
 
 .state-note text {
-  fill: var(--text-color);
+  fill: var(--text-color) !important;
 }
 
 .stateLabel text {
-  fill: var(--text-color);
+  fill: var(--text-color) !important;
 }
 
 #dependencyEnd {
-  fill: var(--menu-divider-color);
-  stroke: var(--menu-divider-color);
+  fill: var(--menu-divider-color) !important;
+  stroke: var(--menu-divider-color) !important;
 }
 
 /* mermaid state v2*/
@@ -1722,17 +1722,17 @@ g.classGroup line {
 }
 
 .transition {
-  stroke: var(--menu-divider-color);
+  stroke: var(--menu-divider-color) !important;
 }
 
 #statediagram-barbEnd {
-  fill: var(--menu-divider-color);
+  fill: var(--menu-divider-color) !important;
 }
 
 /* mermaid journey */
 .journey-section {
-  fill: var(--bg-color5);
-  stroke: var(--menu-divider-color);
+  fill: var(--bg-color5) !important;
+  stroke: var(--menu-divider-color) !important;
 }
 
 .journey-section div {
@@ -1740,9 +1740,9 @@ g.classGroup line {
 }
 
 .task {
-  fill: var(--bg-color2);
-  stroke: var(--menu-divider-color);
-  stroke-width: 1px;
+  fill: var(--bg-color2) !important;
+  stroke: var(--menu-divider-color) !important;
+  stroke-width: 1px !important;
 }
 
 .task div {
@@ -1750,24 +1750,24 @@ g.classGroup line {
 }
 
 #arrowhead {
-  fill: var(--menu-divider-color);
-  stroke: var(--menu-divider-color);
-  stroke-width: 0.3px;
+  fill: var(--menu-divider-color) !important;
+  stroke: var(--menu-divider-color) !important;
+  stroke-width: 0.3px !important;
 }
 
 pre[mermaid-type="journey"] line {
-  stroke: var(--menu-divider-color);
-  stroke-width: 2px;
+  stroke: var(--menu-divider-color) !important;
+  stroke-width: 2px !important;
 }
 
 pre[mermaid-type="journey"] text {
-  fill: var(--text-color1);
+  fill: var(--text-color1) !important;
 }
 
 pre[mermaid-type="journey"] g path,
 pre[mermaid-type="journey"] g line {
-  fill: rgb(100, 104, 110);
-  stroke: var(--text-color);
+  fill: rgb(100, 104, 110) !important;
+  stroke: var(--text-color) !important;
 }
 
 .task-line {
@@ -1776,45 +1776,45 @@ pre[mermaid-type="journey"] g line {
 
 /* mermaid erDiagram */
 pre[mermaid-type="erDiagram"] rect {
-  fill: var(--bg-color2);
+  fill: var(--bg-color2) !important;
 }
 
 pre[mermaid-type="erDiagram"] text {
-  fill: var(--text-color);
+  fill: var(--text-color) !important;
 }
 
 pre[mermaid-type="erDiagram"] path {
-  stroke: var(--menu-divider-color);
+  stroke: var(--menu-divider-color) !important;
 }
 
 #ZERO_OR_ONE_START circle,
 #ZERO_OR_ONE_END circle,
 #ZERO_OR_MORE_START circle,
 #ZERO_OR_MORE_END circle {
-  fill: var(--bg-color);
+  fill: var(--bg-color) !important;
 }
 
 /* mermaid gantt */
 .titleText {
-  fill: var(--text-color1);
+  fill: var(--text-color1) !important;
 }
 
 .section0,
 .section2 {
-  fill: var(--table-thread-color);
+  fill: var(--table-thread-color) !important;
 }
 
 .section1,
 .section3 {
-  fill: var(--table-bg-color);
+  fill: var(--table-bg-color) !important;
 }
 
 .task0,
 .task1,
 .task2,
 .task3 {
-  fill: rgb(80, 84, 90);
-  stroke: rgb(80, 84, 90);
+  fill: rgb(80, 84, 90) !important;
+  stroke: rgb(80, 84, 90) !important;
 }
 
 .taskText0,
@@ -1828,8 +1828,8 @@ pre[mermaid-type="erDiagram"] path {
 .active1,
 .active2,
 .active3 {
-  fill: rgb(100, 104, 110);
-  stroke: rgb(100, 104, 110);
+  fill: rgb(100, 104, 110) !important;
+  stroke: rgb(100, 104, 110) !important;
 }
 
 .activeText0,
@@ -1843,32 +1843,32 @@ pre[mermaid-type="erDiagram"] path {
 .done1,
 .done2,
 .done3 {
-  fill: rgb(48, 51, 58);
-  stroke: rgb(48, 51, 58);
+  fill: rgb(48, 51, 58) !important;
+  stroke: rgb(48, 51, 58) !important;
 }
 
 .crit0,
 .crit1,
 .crit2,
 .crit3 {
-  fill: rgb(150, 150, 150);
-  stroke: var(--text-color1);
+  fill: rgb(150, 150, 150) !important;
+  stroke: var(--text-color1) !important;
 }
 
 .activeCrit0,
 .activeCrit1,
 .activeCrit2,
 .activeCrit3 {
-  fill: rgb(100, 104, 110);
-  stroke: var(--text-color1);
+  fill: rgb(100, 104, 110) !important;
+  stroke: var(--text-color1) !important;
 }
 
 .doneCrit0,
 .doneCrit1,
 .doneCrit2,
 .doneCrit3 {
-  fill: rgb(48, 51, 58);
-  stroke: var(--text-color1);
+  fill: rgb(48, 51, 58) !important;
+  stroke: var(--text-color1) !important;
 }
 
 .taskTextOutside0,
@@ -1879,16 +1879,16 @@ pre[mermaid-type="erDiagram"] path {
 }
 
 .grid text {
-  fill: white;
+  fill: white !important;
 }
 
 .today {
-  stroke: var(--text-color1);
+  stroke: var(--text-color1) !important;
 }
 
 /* mermaid pie chart */
 g.legend > text {
-  fill: var(--text-color1);
+  fill: var(--text-color1) !important;
 }
 
 g.legend > rect {
@@ -1896,40 +1896,40 @@ g.legend > rect {
 }
 
 g > path {
-  stroke: var(--bg-color);
+  stroke: var(--bg-color) !important;
 }
 
 g > text.slice {
-  fill: var(--bg-color);
+  fill: var(--bg-color) !important;
 }
 
 /* flow diagram */
 .md-fences[lang="flow"] .md-diagram-panel-preview rect {
-  fill: var(--bg-color2);
-  stroke: var(--menu-divider-color);
-  stroke-width: 1.2;
+  fill: var(--bg-color2) !important;
+  stroke: var(--menu-divider-color) !important;
+  stroke-width: 1.2 !important;
 }
 
 .md-fences[lang="flow"] .md-diagram-panel-preview path {
-  stroke: var(--menu-divider-color);
-  stroke-width: 1.2;
+  stroke: var(--menu-divider-color) !important;
+  stroke-width: 1.2 !important;
 }
 
 .md-fences[lang="flow"] #cond {
-  fill: var(--bg-color2);
+  fill: var(--bg-color2) !important;
 }
 
 /* sequence diagram */
 .md-fences[lang="sequence"] .md-diagram-panel-preview rect:not([fill="none"]) {
-  fill: var(--bg-color2);
-  stroke: var(--menu-divider-color);
-  stroke-width: 1.2;
+  fill: var(--bg-color2) !important;
+  stroke: var(--menu-divider-color) !important;
+  stroke-width: 1.2 !important;
 }
 
 .md-fences[lang="sequence"] .md-diagram-panel-preview path {
-  fill: var(--menu-divider-color);
-  stroke: var(--menu-divider-color);
-  stroke-width: 1.2;
+  fill: var(--menu-divider-color) !important;
+  stroke: var(--menu-divider-color) !important;
+  stroke-width: 1.2 !important;
 }
 
 .md-fences[lang="sequence"] text,

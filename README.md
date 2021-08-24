@@ -34,13 +34,13 @@ A **DARK** theme for Typora inspired by One Dark theme and Material Design.
 
 ## To-Do
 
-* Add Meterial Design shadow effect to mermaid chart.
+* Add Material Design shadow effect to mermaid chart.
 * Better support for Linux.
 
 ## Notes
 
 * Only tested on Windows, Typora version 0.9.96(beta). 
 * Support Windows "Unibody" style. 
-* The theme should work on MacOS / Linux. Howerver, some effect may display improperly (e.g. checkbox).
+* The theme should work on MacOS / Linux. However, some effect may display improperly (e.g. checkbox).
 
 > If you have any advice or feedback, please create a new issue or contact me via email: sweatran@gmail.com

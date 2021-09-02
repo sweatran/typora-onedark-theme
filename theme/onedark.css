@@ -66,7 +66,7 @@
 
   --code-select-bg-color: rgb(64, 72, 89);
   --code-cursor-color: hsl(220, 100%, 66%);
-  /* implicit selecttion text bg color */
+  /* implicit selection text bg color */
   --select-text-bg-color: rgb(150, 156, 170);
   /* implicit button color */
   --primary-color: var(--button-color);
@@ -703,7 +703,7 @@ input[type="radio"]:checked:before {
   color: var(--hover-text-color);
 }
 
-/* sidebar file nemu divider */
+/* sidebar file menu divider */
 #sidebar-files-menu > .show + .menuitem-group-label.show {
   border-color: var(--menu-divider-color);
 }

@@ -371,7 +371,7 @@ journey
 #### Gantt
 
 ```mermaid
-%% Example with slection of syntaxes
+%% Example with selection of syntaxes
 gantt
 dateFormat  YYYY-MM-DD
 title Adding GANTT diagram functionality to mermaid

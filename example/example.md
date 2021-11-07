@@ -366,6 +366,8 @@ journey
         A1: 5: Me
         A2: 3: Me
         A3: 1: Me, Cat
+        A4: 2
+        A5: 4
 ```
 
 #### Gantt
@@ -401,10 +403,11 @@ Add gantt diagram to demo page      : 20h
 Add another diagram to demo page    : 48h
 ```
 
+
+
 #### Pie Chart
 
 ```mermaid
-
 pie
     title Pie Chart
     "A" : 1
@@ -416,3 +419,4 @@ pie
     "G" : 7
     "H" : 8
 ```
+

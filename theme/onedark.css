@@ -64,10 +64,10 @@
   --code-green-color: hsl(95, 38%, 62%);
   --code-grey-color: hsl(220, 9%, 55%);
 
-  --code-select-bg-color: rgb(64, 72, 89);
+  --code-select-bg-color: rgb(59,68,84);
   --code-cursor-color: hsl(220, 100%, 66%);
-  /* implicit selection text bg color */
-  --select-text-bg-color: rgb(150, 156, 170);
+  /* implicit selecttion text bg color */
+  --select-text-bg-color: rgb(64,72,89);
   /* implicit button color */
   --primary-color: var(--button-color);
   --primary-btn-border-color: transparent;
@@ -89,7 +89,6 @@
   /* implicit focus mode color */
   --blur-text-color: var(--text-color5);
   /* implicit search result select color */
-  --search-select-bg-color: var(--select-text-bg-color);
   --search-select-bg-color: rgb(56, 71, 95);
 
   --control-text-hover-color: var(--hover-text-color);
@@ -99,6 +98,8 @@
 
   --node-border: var(--menu-divider-color);
   --node-fill: var(--bg-color2);
+  /* implicit border color in export menu of setting */
+  --border-color: var(--menu-divider-color);
 }
 
 /* font */
@@ -145,7 +146,7 @@ body {
 
 /* text selection background color */
 .in-text-selection {
-  background-color: rgb(64, 72, 89);
+  background-color: --select-text-bg-color;
 }
 
 /* link */
@@ -421,6 +422,7 @@ sup.md-footnote {
 input {
   background-color: var(--input-color) !important;
   border: 0px !important;
+  border-radius: 6px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -703,7 +705,7 @@ input[type="radio"]:checked:before {
   color: var(--hover-text-color);
 }
 
-/* sidebar file menu divider */
+/* sidebar file nemu divider */
 #sidebar-files-menu > .show + .menuitem-group-label.show {
   border-color: var(--menu-divider-color);
 }
@@ -1540,6 +1542,10 @@ pre.md-meta-block:active {
   stroke: var(--menu-divider-color) !important;
 }
 
+.edgePath .arrowheadPath {
+  fill: var(--menu-divider-color) !important;
+}
+
 .label {
   color: var(--text-color1) !important;
 }
@@ -1554,13 +1560,32 @@ pre.md-meta-block:active {
 }
 
 /* mermaid sequence*/
-text.actor {
+rect.actor {
+  fill: var(--bg-color2) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+text.actor tspan {
   fill: var(--text-color1) !important;
+}
+
+#crosshead path{
+  fill: var(--menu-divider-color) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+#arrowhead path{
+  fill: var(--menu-divider-color) !important;
+  stroke: var(--menu-divider-color) !important;
 }
 
 .messageLine0,
 .messageLine1 {
   stroke: var(--menu-divider-color) !important;
+}
+
+.messageText {
+  fill: var(--text-color1) !important;
 }
 
 rect[class*="activation"] {
@@ -1572,6 +1597,7 @@ rect[class*="activation"] {
 }
 
 .labelBox {
+  fill: var(--bg-color2) !important;
   stroke: rgb(150, 150, 150) !important;
 }
 
@@ -1579,12 +1605,14 @@ rect[class*="activation"] {
   fill: var(--text-color1) !important;
 }
 
-.loopText {
+.loopText,
+.loopText tspan
+{
   fill: var(--text-color1) !important;
 }
 
 .loopLine {
-  stroke: rgb(150, 150, 150) !important;
+  stroke: rgb(180, 180, 180) !important;
 }
 
 .note {
@@ -1592,13 +1620,17 @@ rect[class*="activation"] {
   stroke: var(--menu-divider-color) !important;
 }
 
-.noteText {
+.noteText tspan {
   fill: var(--text-color1) !important;
+}
+
+rect.rect {
+  fill: var(--bg-color3);
 }
 
 /* mermaid class */
 g.classGroup text {
-  fill: var(--text-color) !important;
+  fill: var(--text-color1) !important;
 }
 
 g.classGroup rect {
@@ -1618,20 +1650,24 @@ g.classGroup line {
   stroke: var(--menu-divider-color) !important;
 }
 
-#compositionStart,
-#compositionEnd,
-#aggregationStart,
-#aggregationEnd,
-#dependencyStart,
-#dependencyStart,
-#extensionStart,
-#extensionEnd {
+#compositionStart path,
+#compositionEnd path,
+#aggregationStart path,
+#aggregationEnd path,
+#dependencyStart path,
+#dependencyStart path,
+#extensionStart path,
+#extensionEnd path{
   fill: var(--menu-divider-color) !important;
   stroke: var(--menu-divider-color) !important;
 }
 
 .cardinality text {
-  fill: var(--text-color) !important;
+  fill: var(--text-color1) !important;
+}
+
+.classLabel rect {
+  fill: var(--bg-color3) !important;
 }
 
 /* mermaid state v1 */
@@ -1642,7 +1678,7 @@ g.classGroup line {
 }
 
 .stateGroup text {
-  fill: var(--text-color) !important;
+  fill: var(--text-color1) !important;
 }
 
 .stateGroup circle {
@@ -1666,11 +1702,15 @@ g.classGroup line {
 }
 
 .state-note text {
-  fill: var(--text-color) !important;
+  fill: var(--text-color1) !important;
 }
 
 .stateLabel text {
-  fill: var(--text-color) !important;
+  fill: var(--text-color1) !important;
+}
+
+.stateLabel rect {
+  fill: var(--bg-color3) !important;
 }
 
 #dependencyEnd {
@@ -1678,13 +1718,13 @@ g.classGroup line {
   stroke: var(--menu-divider-color) !important;
 }
 
-/* mermaid state v2*/
-.state-start {
+/* mermaid state v2 */
+circle.state-start {
   fill: var(--bg-color4) !important;
   stroke: var(--menu-divider-color) !important;
 }
 
-.state-end {
+circle.state-end {
   stroke: var(--menu-divider-color) !important;
   fill: var(--bg-color4) !important;
 }
@@ -1695,7 +1735,7 @@ g.classGroup line {
   fill: hsl(218, 13%, 13.5%) !important;
 }
 
-.fork-join {
+rect.fork-join {
   fill: var(--bg-color2) !important;
   stroke: var(--menu-divider-color) !important;
 }
@@ -1705,8 +1745,12 @@ g.classGroup line {
 }
 
 .statediagram-cluster .outer {
-  /*   fill: var(--bg-color4) !important; */
+  fill: var(--bg-color3) !important;
   stroke: var(--menu-divider-color) !important;
+}
+
+.cluster-label span {
+  color: var(--text-color1);
 }
 
 .statediagram-cluster .inner {
@@ -1729,61 +1773,24 @@ g.classGroup line {
   fill: var(--menu-divider-color) !important;
 }
 
-/* mermaid journey */
-.journey-section {
-  fill: var(--bg-color5) !important;
-  stroke: var(--menu-divider-color) !important;
-}
-
-.journey-section div {
-  color: var(--text-color) !important;
-}
-
-.task {
+/* mermaid erDiagram */
+rect.er.entityBox {
   fill: var(--bg-color2) !important;
   stroke: var(--menu-divider-color) !important;
-  stroke-width: 1px !important;
 }
 
-.task div {
-  color: var(--text-color) !important;
-}
-
-#arrowhead {
-  fill: var(--menu-divider-color) !important;
-  stroke: var(--menu-divider-color) !important;
-  stroke-width: 0.3px !important;
-}
-
-pre[mermaid-type="journey"] line {
-  stroke: var(--menu-divider-color) !important;
-  stroke-width: 2px !important;
-}
-
-pre[mermaid-type="journey"] text {
+text.er.entityLabel {
   fill: var(--text-color1) !important;
 }
 
-pre[mermaid-type="journey"] g path,
-pre[mermaid-type="journey"] g line {
-  fill: rgb(100, 104, 110) !important;
-  stroke: var(--text-color) !important;
-}
-
-.task-line {
-  stroke: var(--menu-divider-color) !important;
-}
-
-/* mermaid erDiagram */
-pre[mermaid-type="erDiagram"] rect {
-  fill: var(--bg-color2) !important;
-}
-
-pre[mermaid-type="erDiagram"] text {
-  fill: var(--text-color) !important;
-}
-
-pre[mermaid-type="erDiagram"] path {
+#ONLY_ONE_START path,
+#ONLY_ONE_END path,
+#ZERO_OR_ONE_START path,
+#ZERO_OR_ONE_END path,
+#ONE_OR_MORE_START path,
+#ONE_OR_MORE_END path,
+#ZERO_OR_MORE_START path,
+#ZERO_OR_MORE_END path {
   stroke: var(--menu-divider-color) !important;
 }
 
@@ -1794,14 +1801,76 @@ pre[mermaid-type="erDiagram"] path {
   fill: var(--bg-color) !important;
 }
 
+path.er.relationshipLine {
+  stroke: var(--menu-divider-color) !important;
+}
+
+rect.er.relationshipLabelBox {
+  fill: var(--bg-color3) !important;
+}
+
+text.er.relationshipLabel {
+  fill: var(--text-color1) !important;
+}
+
+/* mermaid journey */
+.journey-section {
+  fill: var(--bg-color2) !important;
+  stroke: var(--menu-divider-color) !important;
+}
+
+.task {
+  fill: var(--bg-color2) !important;
+  stroke: var(--menu-divider-color) !important;
+  stroke-width: 1px !important;
+}
+
+#arrowhead {
+  fill: var(--menu-divider-color) !important;
+  stroke: var(--menu-divider-color) !important;
+  stroke-width: 0.3px !important;
+}
+
+text.legend {
+  fill: var(--text-color1) !important;
+}
+
+pre[mermaid-type="journey"] svg > line {
+  stroke: var(--menu-divider-color) !important;
+  stroke-width: 2px !important;
+}
+
+pre[mermaid-type="journey"] svg > text {
+  fill: var(--text-color1) !important;
+}
+
+.task-line {
+  stroke: var(--menu-divider-color) !important;
+}
+
+circle.face {
+  fill: var(--bg-color1) !important;
+  stroke: var(--text-color1) !important;
+}
+
+circle.face + g > circle {
+  fill: var(--text-color1) !important;
+  stroke: var(--text-color1) !important;
+}
+
+path.mouth,
+line.mouth {
+  stroke: var(--text-color1) !important;
+}
+
 /* mermaid gantt */
-.titleText {
+text.sectionTitle tspan{
   fill: var(--text-color1) !important;
 }
 
 .section0,
 .section2 {
-  fill: var(--table-thread-color) !important;
+  fill: var(--bg-color4) !important;
 }
 
 .section1,
@@ -1817,7 +1886,7 @@ pre[mermaid-type="erDiagram"] path {
   stroke: rgb(80, 84, 90) !important;
 }
 
-.taskText0,
+taskText0,
 .taskText1,
 .taskText2,
 .taskText3 {
@@ -1872,14 +1941,14 @@ pre[mermaid-type="erDiagram"] path {
 }
 
 .taskTextOutside0,
-.taskTextOutside2,
 .taskTextOutside1,
+.taskTextOutside2,
 .taskTextOutside3 {
   fill: var(--text-color1) !important;
 }
 
 .grid text {
-  fill: white !important;
+  fill: var(--text-color1) !important;
 }
 
 .today {
@@ -1887,6 +1956,11 @@ pre[mermaid-type="erDiagram"] path {
 }
 
 /* mermaid pie chart */
+.pieTitleText {
+  fill: var(--text-color1) !important;
+}
+
+
 g.legend > text {
   fill: var(--text-color1) !important;
 }
@@ -1955,4 +2029,36 @@ kbd {
   font-family: "Lucida Console";
   border-color: var(--menu-divider-color);
   box-shadow: 0 2px 0 var(--menu-divider-color);
+}
+
+/* new export menu in setting */
+.export-detail {
+  color: var(--text-color1) !important;
+  background: transparent !important;
+}
+
+.export-item.active {
+  background: var(--hover-bg-color1) !important;
+  border-radius: 6px !important;
+}
+
+.export-detail textarea{
+  background: var(--bg-color5);
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.export-items-list-control {
+  background: var(--bg-color2) !important;
+  border-radius: 6px !important;
+}
+
+.icon-dot-3:before {
+  color: var(--text-color1);
+  z-index: 1;
+}
+
+.row.text-input select {
+  width: 510px !important;
 }

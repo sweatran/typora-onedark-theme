@@ -1405,28 +1405,32 @@ pre.md-meta-block:active {
 
 /* insert table panel */
 .modal-content {
-  border: 0px;
-  border-radius: 6px;
+  border: 0px !important;
+  border-radius: 6px !important;
 }
 
 .modal-content .btn-primary {
-  background-color: var(--hover-bg-color1);
+  background-color: transparent;
   color: var(--text-color1);
   outline-width: 0px;
+  border: none;
+  border-radius: 3px;
+}
+
+.modal-content .btn-default {
+  background-color: var(--hover-bg-color1);
+  border: none;
+  border-radius: 3px;
 }
 
 .modal-content .btn-primary:hover {
   color: var(--hover-text-color);
+  background-color: var(--hover-bg-color1);
 }
 
 .modal-content .form-control,
 .modal-content .form-control:focus {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-.modal-backdrop {
-  background-color: black;
-  opacity: 0.3 !important;
 }
 
 /* zoom  */

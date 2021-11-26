@@ -430,8 +430,13 @@ input {
 /* input:hover {
     background-color: var(--hover-bg-color2) !important;
 } */
+input[type="checkbox"] {
+  visibility: hidden;
+}
+
 /* checkbox */
 input[type="checkbox"]:before {
+  visibility: visible;
   content: "";
   display: inline-block;
   width: 1.2rem;
